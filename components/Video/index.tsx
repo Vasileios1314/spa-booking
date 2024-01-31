@@ -13,8 +13,8 @@ const Video = () => {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="Taste from the Netherlands."
+          title="We are ready to welcome you, are you?"
+          paragraph="Taste from the Albania."
           center
           mb="80px"
         />
@@ -53,7 +53,7 @@ const Video = () => {
         autoplay={true}
         start={true}
         isOpen={isOpen}
-        videoId="cwUl9dMCkNU"
+        videoId="Mspf02USQBU"
         onClose={() => setOpen(false)}
       />
 

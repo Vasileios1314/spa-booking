@@ -11,7 +11,7 @@ const AboutSectionTwo = () => {
               data-wow-delay=".15s"
             >
               <Image
-                src="/images/about/about-image-2.jpg"
+                src="/images/about/about-image2.jpg"
                 alt="about image"
                 fill
               />
@@ -24,31 +24,29 @@ const AboutSectionTwo = () => {
                   Diverse Neighborhoods
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Experience the charm of Dutch living in varied neighborhoods,
-                  each with its unique culture, architecture, and ambiance,
-                  ready to welcome you and become your next home.
+                  Experience the charm of Albanian living in varied
+                  neighborhoods, each with its unique culture, architecture, and
+                  ambiance, ready to welcome you.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Academic Excellence
+                  Albanias Natural and Historical Beauty: A Harmonious Blend
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The Netherlands boasts world-renowned institutions offering
-                  top-tier education. Whether you&apos;re pursuing arts,
-                  sciences, or business, you&apos;re set for an academic journey
-                  of distinction.
-                </p>
-              </div>
-              <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Career Opportunities
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Step into a thriving job market, teeming with opportunities in
-                  sectors from tech to tourism. With its progressive work
-                  culture and global connections, the Netherlands is the ideal
-                  launchpad for your career.
+                  Albania is a country blessed with both breathtaking natural
+                  scenery and rich historical monuments. From the snow-capped
+                  peaks of the Albanian Alps to the pristine beaches along the
+                  Adriatic and Ionian coasts, Albanias diverse landscapes offer
+                  endless opportunities for adventure and exploration. But the
+                  countrys beauty extends beyond its natural wonders, as it is
+                  also home to a wealth of historical and cultural landmarks.
+                  From ancient Illyrian ruins and Ottoman-era castles, to the
+                  stunning mosaics of the Byzantine churches, Albanias monuments
+                  bear witness to the countrys rich and varied history. Whether
+                  one is seeking natural beauty or cultural richness, Albania
+                  provides a harmonious blend of both, making it a truly unique
+                  and captivating destination.
                 </p>
               </div>
             </div>

@@ -6,8 +6,17 @@ const ContactPage = () => {
     <>
       <Breadcrumb
         pageName="Reach Out & Connect"
-        description="Navigating the path to a new life in the Netherlands? We're here to help every step of the way. Our Contact page is your direct gateway to the HRS Hub team, offering a quick and efficient way to address all your queries. Whether you have questions about our services, need guidance on a specific aspect of relocation, or simply wish to share your thoughts and feedback, we're just a message away. Comprehensive support, expert insights, and personalized responses await. Let's start the conversation and make your Dutch journey seamless. Visit our Contact page now."
+        description="Our apartments are located in the heart of Vlore. We
+        are open 24/7 and offer a warm and welcoming atmosphere for all of our
+        guests. Check In: 14:00 Check Out: 10:00"
       />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d192.45840265338606!2d19.492809825235316!3d40.456408467063966!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snl!4v1706731115700!5m2!1sen!2snl"
+        width="800"
+        height="300"
+        style={{ border: "10;", margin: "auto" }}
+        loading="lazy"
+      ></iframe>
       <Contact />
     </>
   );

@@ -24,8 +24,12 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Captivating Canals & Dutch Delights"
-                paragraph="The Netherlands, with its intricate canals and timeless charm, offers a unique blend of rich history and modern innovation. From vibrant tulip fields and windmill-dotted landscapes to bustling urban centers, life here is a harmonious meld of tradition and progress. Experience the Dutch way of life: serene, yet full of vibrant energy."
+                title="Discover Albania"
+                paragraph="  Albania is a country with a rich history and diverse landscapes.
+                From its stunning mountain ranges to its pristine beaches, Albania
+                offers a unique experience for travelers. In this video, you will be
+                able to see just a few of the many wonders that Albania has to
+                offer."
                 mb="44px"
               />
 
@@ -55,7 +59,7 @@ const AboutSectionOne = () => {
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.png"
+                  src="/images/about/about-image.jpg"
                   alt="Canals"
                   fill
                   className="mx-auto max-w-full lg:mr-0"

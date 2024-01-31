@@ -11,8 +11,8 @@ const Features = () => {
       >
         <div className="container">
           <SectionTitle
-            title="Main Services"
-            paragraph="Delve into our core offerings at HRS Hub, designed with your seamless transition in mind. Each icon below represents a fundamental service we expertly provide, from handling administrative paperwork and finding the perfect home, to cultural orientation and settling-in support. Explore each to discover how we make your move to the Netherlands truly effortless."
+            title="Our Services"
+            paragraph="Summer in Albania is a wonderful experience. The country's beautiful beaches, warm climate, and vibrant atmosphere make it a popular tourist destination. The turquoise waters and stunning scenery are sure to leave you in awe. Whether you want to relax or engage in water activities, there's something for everyone in Albania. Come and discover its hidden gems for a summer vacation you'll never forget!"
             center
           />
 
