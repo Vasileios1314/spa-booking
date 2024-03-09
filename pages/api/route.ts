@@ -29,7 +29,10 @@ export default async function handler(
 
     return res
       .status(200)
-      .json({ message: "Success", data: { name, email, message } });
+      .json({
+        message: `Success ${(process.env.NEXT_PUBLIC_URL, process.env.URL)}`,
+        data: { name, email, message },
+      });
   } catch (error) {
     console.error("Error in /api/route:", error);
     return res
