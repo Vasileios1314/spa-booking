@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import EmailTemplate from "app/Emails/emailTemplate";
+import index from "@/app/emails/index";
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
@@ -12,7 +12,7 @@ export default async function POST(request, response) {
       // from: "onboarding@resend.dev", //dev perpose
       to: process.env.NEXT_PUBLIC_EMAIL_TO,
       subject: "New Ticket!!",
-      react: EmailTemplate({ name, email, message }),
+      react: index({ name, email, message }),
     });
 
     response.status(200).json({ success: true, data });

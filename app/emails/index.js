@@ -1,4 +1,4 @@
-const EmailTemplate = ({ name, email, message }) => {
+const index = ({ name, email, message }) => {
   return (
     <div>
       <h2>New Ticket Submission</h2>
@@ -16,4 +16,4 @@ const EmailTemplate = ({ name, email, message }) => {
   );
 };
 
-export default EmailTemplate;
+export default index;
