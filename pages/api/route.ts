@@ -8,8 +8,8 @@ export default async function POST(request, response) {
 
   try {
     const data = await resend.emails.send({
-      // from: process.env.NEXT_PUBLIC_EMAIL_FROM, //create a domain email
-      from: "onboarding@resend.dev", //dev perpose
+      from: process.env.NEXT_PUBLIC_EMAIL_FROM, //create a domain email
+      // from: "onboarding@resend.dev", //dev perpose
       to: process.env.NEXT_PUBLIC_EMAIL_TO,
       subject: "New Ticket!!",
       react: EmailTemplate({ name, email, message }),

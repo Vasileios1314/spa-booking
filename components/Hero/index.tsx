@@ -32,15 +32,7 @@ const Hero = () => (
       <div
         className="absolute top-40 right-0 left-0 z-[-1] h-full w-full object-cover object-center opacity-100 lg:opacity-100"
         style={{ maxWidth: "500px", marginTop: "10em", margin: "auto" }}
-      >
-        <Image
-          src="/images/hero/beachImage.png"
-          alt="beach"
-          width={140}
-          height={30}
-          className="w-full"
-        />
-      </div>
+      ></div>
     </section>
   </>
 );

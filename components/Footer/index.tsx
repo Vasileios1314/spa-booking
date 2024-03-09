@@ -14,14 +14,14 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/logo.png"
+                    src="/images/logo/logo_transparent.png"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
                   <Image
-                    src="/images/logo/logo.png"
+                    src="/images/logo/logo_transparent.png"
                     alt="logo"
                     className="hidden w-full dark:block"
                     width={140}
@@ -44,6 +44,15 @@ const Footer = () => {
                     >
                       {" "}
                       About{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/apartments"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      Apartments{" "}
                     </a>
                   </li>
                 </ul>
