@@ -28,10 +28,14 @@ const Contact = () => {
         message: formData.get("message"),
       };
 
-      // POST request to Next.js API route
-      const apiResponse = await axios.post(`/api/route`, data);
-
-      if (apiResponse.data.success) {
+      const apiResponse = await fetch(`/api/route`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (apiResponse.ok) {
         alert(
           "Thank you for reaching out! Your message has been successfully sent, and we'll get back to you shortly."
         );

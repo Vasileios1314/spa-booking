@@ -1,21 +1,38 @@
-import { Resend } from "resend";
-// import index from "@/emails/index";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  try {
+    if (req.method !== "POST") {
+      return res.status(405).json({ message: "Method Not Allowed" });
+    }
 
-export default async function POST(request, response) {
-  // const { name, email, message } = await request.body;
-  // try {
-  //   const data = await resend.emails.send({
-  //     from: process.env.NEXT_PUBLIC_EMAIL_FROM, //create a domain email
-  //     // from: "onboarding@resend.dev", //dev perpose
-  //     to: process.env.NEXT_PUBLIC_EMAIL_TO,
-  //     subject: "New Ticket!!",
-  //     react: index({ name, email, message }),
-  //   });
-  //   response.status(200).json({ success: true, data });
-  // } catch (error) {
-  //   // console.error("Error sending email:", error);
-  //   response.status(500).json({ success: false, error: error.message });
-  // }
+    const { name, email, message } = req.body;
+    const targetURL = `${process.env.URL}/.netlify/functions/emails/ticket`;
+
+    const response = await fetch(targetURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "netlify-emails-secret": process.env.NETLIFY_EMAILS_SECRET,
+      },
+      body: JSON.stringify({
+        from: process.env.NEXT_PUBLIC_EMAIL_FROM,
+        to: process.env.NEXT_PUBLIC_EMAIL_TO,
+        subject: "New Ticket!!",
+        parameters: { name, email, message },
+      }),
+    });
+
+    return res
+      .status(200)
+      .json({ message: "Success", data: { name, email, message } });
+  } catch (error) {
+    console.error("Error in /api/route:", error);
+    return res
+      .status(500)
+      .json({ message: "Server error", error: error.message });
+  }
 }
