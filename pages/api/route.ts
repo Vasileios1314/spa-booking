@@ -10,8 +10,9 @@ export default async function handler(
     }
 
     const { name, email, message } = req.body;
-    const targetURL = `${process.env.URL}/.netlify/functions/emails/ticket`;
-
+    const targetURL = `${
+      process.env.NEXT_PUBLIC_URL || process.env.URL
+    }/.netlify/functions/emails/ticket`;
     const response = await fetch(targetURL, {
       method: "POST",
       headers: {
