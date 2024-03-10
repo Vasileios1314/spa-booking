@@ -1,7 +1,7 @@
 "use client";
 const ApartmentsList = () => {
   return (
-    <div className="px-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div className="px-1 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div
         className="airbnb-embed-frame"
         data-id="49529825"
