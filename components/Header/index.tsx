@@ -8,8 +8,13 @@ import menuData from "./menuData";
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
+  };
+
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768);
   };
 
   // Sticky Navbar
@@ -22,6 +27,7 @@ const Header = () => {
     }
   };
   useEffect(() => {
+    checkMobile();
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
@@ -146,12 +152,11 @@ const Header = () => {
                         )}
                       </li>
                     ))}
+                    {isMobile ? <ThemeToggler /> : ""}
                   </ul>
                 </nav>
               </div>
-              <div>
-                <ThemeToggler />
-              </div>
+              <div>{!isMobile ? <ThemeToggler /> : ""}</div>
             </div>
           </div>
         </div>

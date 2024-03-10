@@ -1,54 +1,80 @@
 "use client";
 import { useCallback, useState } from "react";
+import menuData from "../../components/Header/menuData";
+import Link from "next/link";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
 
-  const handleSubmit = useCallback(
-    async (e) => {
-      e.preventDefault();
-      const formData = new FormData(e.target);
+  // const handleSubmit = useCallback(
+  //   async (e) => {
+  //     e.preventDefault();
+  //     const formData = new FormData(e.target);
 
-      const data = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        message: formData.get("message"),
-      };
+  //     const data = {
+  //       name: formData.get("name"),
+  //       email: formData.get("email"),
+  //       message: formData.get("message"),
+  //     };
 
-      const apiResponse = await fetch(`/api/route`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      if (apiResponse.ok) {
-        alert(
-          "Thank you for reaching out! Your message has been successfully sent, and we'll get back to you shortly."
-        );
-      } else {
-        alert(
-          "Sorry, there was an issue sending your message. Please try again in a few minutes or contact us directly via phone."
-        );
-      }
-    },
-    [formData]
-  );
+  //     const apiResponse = await fetch(`/api/route`, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+  //     if (apiResponse.ok) {
+  //       alert(
+  //         "Thank you for reaching out! Your message has been successfully sent, and we'll get back to you shortly."
+  //       );
+  //     } else {
+  //       alert(
+  //         "Sorry, there was an issue sending your message. Please try again in a few minutes or contact us directly via phone."
+  //       );
+  //     }
+  //   },
+  //   [formData]
+  // );
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
+        <div className="flex justify-center items-center gap-4 w-full h-full px-4">
+          <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="mailto:aleksandriaapartmentsvlore@gmail.com"
+            >
+              Contact us by email
+            </a>
+          </button>
+          <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+            <Link target="_blank" key={menuData[2].id} href={menuData[2].path}>
+              Visit our apartments in Airbnb
+            </Link>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
+{
+  /* <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
@@ -132,13 +158,6 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          {/* <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
-          </div> */}
         </div>
-      </div>
-    </section>
-  );
-};
-
-export default Contact;
+      </div> */
+}
