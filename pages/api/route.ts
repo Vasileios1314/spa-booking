@@ -19,7 +19,9 @@ export default async function handler(
         .status(200)
         .json({ message: "Email sent successfully", data: responseData });
     } else {
-      throw new Error("Failed to send email");
+      return res
+        .status(netlifyResponse.statusCode)
+        .json({ message: "Failed to send email" });
     }
   } catch (error) {
     console.error("Error in /api/route:", error);
