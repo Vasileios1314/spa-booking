@@ -10,9 +10,10 @@ export default async function handler(
     }
 
     const { name, email, message } = req.body;
-    const netlifyFunctionURL = `${process.env.NEXT_PUBLIC_NETLIFY_FUNCTIONS_BASE_URL}/triggerEmail`;
-
-    const response = await fetch(netlifyFunctionURL, {
+    const targetURL = `${
+      process.env.NEXT_PUBLIC_URL || process.env.URL
+    }/.netlify/functions/emails/ticket`;
+    const response = await fetch(targetURL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
