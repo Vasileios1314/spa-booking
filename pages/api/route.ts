@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { NEThandler } from ".netlify/functions/triggerEmail";
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,34 +10,21 @@ export default async function handler(
       return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    const { name, email, message } = req.body;
-    const targetURL = `${
-      process.env.NEXT_PUBLIC_URL || process.env.URL
-    }/.netlify/functions/emails/ticket`;
-    const response = await fetch(targetURL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "netlify-emails-secret": process.env.NETLIFY_EMAILS_SECRET,
-      },
-      body: JSON.stringify({
-        from: process.env.NEXT_PUBLIC_EMAIL_FROM,
-        to: process.env.NEXT_PUBLIC_EMAIL_TO,
-        subject: "New Ticket!!",
-        parameters: { name, email, message },
-      }),
-    });
+    const netlifyResponse = await NEThandler(req.body);
 
-    return res
-      .status(200)
-      .json({
-        message: `Success ${(process.env.NEXT_PUBLIC_URL, process.env.URL)}`,
-        data: { name, email, message },
-      });
+    const responseData = JSON.parse(netlifyResponse.body);
+
+    if (netlifyResponse.statusCode === 200) {
+      return res
+        .status(200)
+        .json({ message: "Email sent successfully", data: responseData });
+    } else {
+      throw new Error("Failed to send email");
+    }
   } catch (error) {
     console.error("Error in /api/route:", error);
     return res
       .status(500)
-      .json({ message: "Server error", error: error.message });
+      .json({ message: "Server error", error: error.toString() });
   }
 }
