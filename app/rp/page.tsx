@@ -9,7 +9,7 @@ const Rp = () => {
         Thank you for booking with Aleksandria Apartmens Vlorë. We understand that sometimes plans change, and flexibility is important. The following refund policy applies to all bookings made through our website, over the phone, or in person.
         
         Refund Eligibility
-        To be eligible for a refund, you must cancel your booking at least seven (7) days before your scheduled arrival date. Cancellations made after this period will not be eligible for a refund.
+        To be eligible for a refund, you must cancel your booking at least five (5) days before your scheduled arrival date. Cancellations made after this period will not be eligible for a refund.
         
         How to Cancel Your Booking
         To cancel your booking, please contact us at our website with your booking reference number and the name the booking was made under. We will process your cancellation request and notify you of the outcome.

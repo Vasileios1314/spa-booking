@@ -2,6 +2,7 @@
 import { useCallback, useState } from "react";
 import menuData from "../../components/Header/menuData";
 import Link from "next/link";
+import Image from "next/image";
 
 const Contact = () => {
   // const [formData, setFormData] = useState({
@@ -51,7 +52,12 @@ const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="flex justify-center items-center gap-4 w-full h-full px-4">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full h-full px-4">
+          <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+            <Link target="_blank" key={menuData[2].id} href={menuData[2].path}>
+              Visit our apartments in Airbnb
+            </Link>
+          </button>
           <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             <a
               rel="noreferrer"
@@ -61,10 +67,16 @@ const Contact = () => {
               Contact us by email
             </a>
           </button>
+
           <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            <Link target="_blank" key={menuData[2].id} href={menuData[2].path}>
-              Visit our apartments in Airbnb
-            </Link>
+            <a
+              href="/images/info/Welcome to our cozy retreat in Vlorë.pdf"
+              download="Welcome to our cozy retreat in Vlorë.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Info Over Vlorë
+            </a>
           </button>
         </div>
       </div>

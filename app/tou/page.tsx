@@ -6,7 +6,7 @@ const Tou = () => {
       <Breadcrumb
         pageName="Terms of Use"
         description="1. Introduction
-        Welcome to Aleksandria Apartmens Vlorë ('we', 'us', or 'our'). By accessing our website [Your Website URL], you agree to be bound by these Terms of Use ('Terms'), all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you disagree with any part of the terms, please do not use our website.
+        Welcome to Aleksandria Apartmens Vlorë. By accessing our website, you agree to be bound by these Terms of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you disagree with any part of the terms, please do not use our website.
         
         2. Use License
         Permission is granted to temporarily download one copy of the materials (information or software) on Aleksandria Apartmens Vlorë's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:
