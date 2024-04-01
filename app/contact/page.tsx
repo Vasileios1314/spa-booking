@@ -8,7 +8,7 @@ const ContactPage = () => {
         pageName="Reach Out & Connect"
         description="Our apartments are located in the heart of Vlore. We
         are open 24/7 and offer a warm and welcoming atmosphere for all of our
-        guests. Check In: 14:00 Check Out: 10:00"
+        guests. Check In: 14:00 Check Out: 11:00"
       />
       <div
         className="map-container"
