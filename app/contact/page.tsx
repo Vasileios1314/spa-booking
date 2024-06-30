@@ -19,7 +19,7 @@ const ContactPage = () => {
         }}
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d192.45840265338606!2d19.492809825235316!3d40.456408467063966!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snl!4v1706731115700!5m2!1sen!2snl"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d769.8345896695715!2d19.492126269602533!3d40.456323018662474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDI3JzIyLjgiTiAxOcKwMjknMzQuMCJF!5e1!3m2!1sen!2snl!4v1719749813218!5m2!1sen!2snl"
           style={{
             position: "absolute",
             top: "0",
