@@ -35,9 +35,9 @@ const ApartmentsList = () => {
   }, []);
 
   return (
-    <div className="w-full m-0 p-0 py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
+    <div className="w-full m-0 p-0 px-2 py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
       <div
-        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
+        className="airbnb-embed-frame w-full max-w-[350px] mx-auto h-[300px] sm:max-w-[450px]"
         data-id="49529825"
         data-view="home"
         data-hide-price="true"
