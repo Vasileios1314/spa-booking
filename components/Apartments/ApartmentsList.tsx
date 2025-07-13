@@ -17,20 +17,30 @@ const ApartmentsList = () => {
     script.async = true;
     document.body.appendChild(script);
 
+    // After a short delay, force all airbnb iframes to be 100% width
+    const timeout = setTimeout(() => {
+      document.querySelectorAll('.airbnb-embed-frame iframe').forEach((iframe) => {
+        const el = iframe as HTMLIFrameElement;
+        el.style.width = '100%';
+        el.style.maxWidth = '100vw';
+        el.style.boxSizing = 'border-box';
+      });
+    }, 800);
+
     // Clean up on unmount
     return () => {
       script.remove();
+      clearTimeout(timeout);
     };
   }, []);
 
   return (
-    <div className="px-1 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="w-full m-0 p-0 py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="49529825"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/49529825?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -44,11 +54,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="925080660358939939"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/925080660358939939?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -62,11 +71,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="49529757"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/49529757?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -80,11 +88,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="49671963"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/49671963?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -98,11 +105,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="49672026"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/49672026?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -116,11 +122,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="49026142"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/49026142?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -134,11 +139,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="49529445"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/49529445?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -152,11 +156,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="1186035698985620835"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/1186035698985620835?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -170,11 +173,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="1186014726154543745"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/1186014726154543745?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
@@ -188,11 +190,10 @@ const ApartmentsList = () => {
       </div>
 
       <div
-        className="airbnb-embed-frame"
+        className="airbnb-embed-frame w-full h-[300px] sm:max-w-[450px] sm:mx-auto"
         data-id="1186015011018433127"
         data-view="home"
         data-hide-price="true"
-        style={{ width: "450px", height: "300px", margin: "auto" }}
       >
         <a href="https://www.airbnb.com/rooms/1186015011018433127?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">
           View On Airbnb
