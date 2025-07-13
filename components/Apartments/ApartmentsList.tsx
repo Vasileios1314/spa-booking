@@ -1,5 +1,28 @@
 "use client";
+import { useEffect } from "react";
+
+const AIRBNB_SDK_URL = "https://www.airbnb.com/embeddable/airbnb_jssdk";
+
 const ApartmentsList = () => {
+  useEffect(() => {
+    // Remove any existing Airbnb SDK script
+    const existingScript = document.querySelector(`script[src="${AIRBNB_SDK_URL}"]`);
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Add the script again to force re-initialization
+    const script = document.createElement("script");
+    script.src = AIRBNB_SDK_URL;
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Clean up on unmount
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   return (
     <div className="px-1 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div
@@ -18,10 +41,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★4.79 · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -40,10 +59,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★4.93 · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -62,10 +77,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★4.89 · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -84,10 +95,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★4.60 · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -106,10 +113,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★4.86 · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -128,10 +131,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -150,10 +149,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★4.78 · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -172,10 +167,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlora · ★New · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -194,10 +185,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★New · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
 
       <div
@@ -216,10 +203,6 @@ const ApartmentsList = () => {
         >
           Rental unit in Vlorë · ★New · 1 bedroom · 2 beds · 1 bath
         </a>
-        <script
-          async
-          src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
       </div>
     </div>
   );
