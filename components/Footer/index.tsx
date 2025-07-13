@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="bg-primary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color dark:text-white">
-              Powerd By: Of course by US &copy;2024
+              Powerd By: Of course by US &copy;{new Date().getFullYear()}
             </p>
           </div>
         </div>
